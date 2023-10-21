@@ -43,7 +43,7 @@ u('#searchButton').handle('click', function(e) { //use handle to automatically p
 
 function executeSearch(searchQuery){
     fetch("/index.json").then(r => r.json())
-    .then(function(data) {    
+    .then(function(data) {
         var pages = data;
         var fuse = new Fuse(pages, fuseOptions);
         var result = fuse.search(searchQuery);
@@ -73,7 +73,7 @@ function populateResults(result){
           snippetHighlights.push(searchTerm);
         }else{
           value.matches.forEach(function(matchKey,mvalue){
-            
+
             if(mvalue.key == "tags" || mvalue.key == "categories" ){
               snippetHighlights.push(mvalue.value);
             }else if(mvalue.key == "contents"){
@@ -96,11 +96,11 @@ function populateResults(result){
     })
 }
 
-  
+
   function param(name) {
       return decodeURIComponent((location.search.split(name + '=')[1] || '').split('&')[0]).replace(/\+/g, ' ');
   }
-  
+
   function render(templateString, data) {
     var conditionalMatches,conditionalPattern,copy;
     conditionalPattern = /\$\{\s*isset ([a-zA-Z]*) \s*\}(.*)\$\{\s*end\s*}/g;
