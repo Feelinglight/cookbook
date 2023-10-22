@@ -1,6 +1,6 @@
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-        <a class="navbar-brand">
+        <a class="navbar-brand" href="{{ .Site.BaseURL }}">
             {{ $ctx := . }}
             {{ with .Site.Params.logo }}
                 <img src="{{ $ctx.Site.BaseURL }}{{ .filename }}" width="{{ .width }}" height="{{ .height }}">
@@ -35,6 +35,9 @@
                     </div>
                     <div class="control">
                         <button id="searchButton" class="button is-secondary">Search</button>
+                        <script type="text/javascript">
+                            document.querySelector('#searchButton').setAttribute("data-baseurl", "{{ .Site.BaseURL }}");
+                        </script>
                     </div>
                 </form>
             </div>
