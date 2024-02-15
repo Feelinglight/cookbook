@@ -92,6 +92,10 @@ function populateResults(result){
           //pull template from hugo template definition
           var templateDefinition = u('#search-result-template').html();
           //replace values
+          // Так можно получить картинку от корня, но baseUrl содержит префикс - название репозитория
+          // Непонятно как его получить из JS, поэтому пока что поиск работает только с главной
+          // страницы
+          var img_url = new URL(value.item.imageLink, window.location.origin).href
           var output = render(templateDefinition,{key:key,title:value.item.title,link:value.item.permalink,tags:value.item.tags,categories:value.item.categories,snippet:snippet,image:value.item.imageLink});
           u('#searchResultsCol').append(output);
     })
