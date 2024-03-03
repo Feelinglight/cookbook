@@ -2,18 +2,18 @@
 draft: false
 title: "Lava Mini Chiffon Cake"
 author:  MoLaLa Cook
-recipe_image: images/recipe-headers/LavaCakejpg #The image for your recipe
+recipe_image: images/recipe-headers/LavaCake.jpg #The image for your recipe
 image_width: 512
 image_height: 314
-date: 2024-03-03T11:54:00-00:00
+date: 2024-03-03T00:00:00-00:00
 tags: ["десерты","кексы"] #tags for your recipe
 tagline: " "
-servings: 
-prep_time:  #in minutes #can be BLANK
-cook: false # If we are cooking this, leave true, if we are cooling set to false
+servings: xxx
+prep_time: xxx  #in minutes #can be BLANK
+cook: true # If we are cooking this, leave true, if we are cooling set to false
 cook_increment: minutes # set to minutes or hours
-cook_time:  #in minutes #can be BLANK
-calories:  #in kcal #can be BLANK
+cook_time: xxx  #in minutes #can be BLANK
+calories: xxx #in kcal #can be BLANK
 value: xxx
 site: https://www.youtube.com/watch?v=PGvUyfYf4Ec&list=PL1yUnahL2condeSxsLXp72gMVMGck3WnX&index=38&ab_channel=MoLaLaCook
 ---
